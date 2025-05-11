@@ -1,16 +1,30 @@
+import warnings
+import os
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['TF_CPP_MIN_LOG_LEVEL']  = '2' 
+warnings.filterwarnings(
+    'ignore',
+    category=DeprecationWarning,
+    module='tf_keras.src.losses'
+)
+from transformers import logging as tfm_logging
+tfm_logging.set_verbosity_error()
+
+import nltk
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', quiet=True)
+
 import speech_recognition as sr
 import language_tool_python
 import textstat
 from transformers import pipeline
-import nltk
 import re
-import numpy
+import numpy as np 
 from record import record_audio
 
-
-    
-
-nltk.download('punkt')
 
 # Load sentiment analysis model
 sentiment_analyzer = pipeline("sentiment-analysis")
