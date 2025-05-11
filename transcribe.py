@@ -5,6 +5,8 @@ from transformers import pipeline
 import nltk
 import re
 import numpy
+from record import record_audio
+
 
     
 
@@ -31,7 +33,25 @@ def transcribe_audio(file_path):
 def grammar_feedback(text):
     tool = language_tool_python.LanguageTool('en-US')
     matches = tool.check(text)
-    issues = [match.message for match in matches]
+
+    # Rules to ignore: punctuation, capitalization, etc.
+    excluded_rules = {
+        "UPPERCASE_SENTENCE_START",
+        "PUNCTUATION_PARAGRAPH_END",
+        "PUNCTUATION",
+        "COMMA_PARENTHESIS_WHITESPACE",
+        "EN_QUOTES",
+        "WHITESPACE_RULE",
+        "MORFOLOGIK_RULE_EN_US",
+        "EN_UNPAIRED_BRACKETS",
+        "DASH_RULE",
+        "OXFORD_COMMA"
+    }
+
+    # Filter out matches based on ruleId
+    filtered_matches = [match for match in matches if match.ruleId not in excluded_rules]
+
+    issues = [match.message for match in filtered_matches]
     return issues
 
 def sentiment_score(text):
@@ -90,6 +110,7 @@ def analyze_text(text):
         print("🗣️ Reduce filler words like 'um', 'like', etc. to sound more professional.")
 
 # === Run ===
+record_audio() 
 file_path = "interviewaudio.wav"  
 transcribed_text = transcribe_audio(file_path)
 if transcribed_text and not transcribed_text.startswith("Could not"):
