@@ -1,185 +1,218 @@
-import warnings
 import os
-
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ['TF_CPP_MIN_LOG_LEVEL']  = '2' 
-warnings.filterwarnings(
-    'ignore',
-    category=DeprecationWarning,
-    module='tf_keras.src.losses'
-)
-from transformers import logging as tfm_logging
-tfm_logging.set_verbosity_error()
-
-import nltk
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt', quiet=True)
-
-import speech_recognition as sr
-import language_tool_python
-import textstat
-from transformers import pipeline
 import re
-import numpy as np 
-import myprosody as mysp
 import wave
+import warnings
+
+# Suppress warnings
+warnings.filterwarnings('ignore')
+
+# Core imports
+import speech_recognition as sr  # pip install SpeechRecognition
+import spacy             # pip install spacy && python -m spacy download en_core_web_sm
+import language_tool_python     # pip install language_tool_python
+import textstat          # pip install textstat
+import time
+from pydub import AudioSegment, silence  # pip install pydub
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # pip install vaderSentiment
 
 from record import record_audio
-from pydub import AudioSegment, silence
 
+# Load NLP and sentiment models
+import spacy.cli
+try:
+    nlp = spacy.load('en_core_web_sm')
+except OSError:
+    spacy.cli.download('en_core_web_sm')
+    nlp = spacy.load('en_core_web_sm')
 
-# Load sentiment analysis model
-sentiment_analyzer = pipeline("sentiment-analysis")
+sentiment_analyzer = SentimentIntensityAnalyzer()
 
-PROSODY_SCRIPT_PATH = "prosody_analysis.praat"
+# === Utility Functions ===
+def get_audio_duration(path):
+    """Return duration of WAV file in seconds."""
+    with wave.open(path, 'rb') as wf:
+        return wf.getnframes() / wf.getframerate()
 
-def get_audio_duration(file_path):
-    with wave.open(file_path, 'rb') as wf:
-        frames = wf.getnframes()
-        rate = wf.getframerate()
-    return frames / rate
-
-# === Helper Functions ===
-def transcribe_audio(file_path):
-    recognizer = sr.Recognizer()
-    with sr.AudioFile(file_path) as source:
-        print("Transcribing audio...")
-        audio = recognizer.record(source)
+# === Speech Metrics ===
+def pause_metrics(path, min_silence_len=500, silence_thresh=-40):
+    """Return (num_pauses, avg_pause_duration_s) via pydub silence detection."""
     try:
-        text = recognizer.recognize_google(audio)
-        print("Transcription complete.")
-        return text
-    except sr.UnknownValueError:
-        return "Could not understand the audio."
-    except sr.RequestError:
-        return "Error with the Google Speech Recognition service."
+        audio = AudioSegment.from_wav(path)
+        intervals = silence.detect_silence(
+            audio, min_silence_len=min_silence_len, silence_thresh=silence_thresh
+        )
+        durations = [(end - start) / 1000 for start, end in intervals]
+        return len(durations), (sum(durations) / len(durations)) if durations else 0
+    except Exception as e:
+        print(f"⚠️ Pause analysis error: {e}")
+        return 0, 0
 
-def grammar_feedback(text):
-    tool = language_tool_python.LanguageTool('en-US')
-    matches = tool.check(text)
-
-    # Rules to ignore: punctuation, capitalization, etc.
-    excluded_rules = {
-        "UPPERCASE_SENTENCE_START",
-        "PUNCTUATION_PARAGRAPH_END",
-        "PUNCTUATION",
-        "COMMA_PARENTHESIS_WHITESPACE",
-        "EN_QUOTES",
-        "WHITESPACE_RULE",
-        "MORFOLOGIK_RULE_EN_US",
-        "EN_UNPAIRED_BRACKETS",
-        "DASH_RULE",
-        "OXFORD_COMMA"
+# === NLP Feature Extraction ===
+def nlp_analysis(text):
+    """Perform NLP analysis: POS distribution, lexical diversity, key phrases, entities."""
+    doc = nlp(text)
+    pos_counts = {}
+    for token in doc:
+        pos_counts[token.pos_] = pos_counts.get(token.pos_, 0) + 1
+    tokens = [t.text.lower() for t in doc if t.is_alpha]
+    lex_div = len(set(tokens)) / len(tokens) if tokens else 0
+    key_phrases = list({chunk.text.lower() for chunk in doc.noun_chunks})
+    entities = [(ent.text, ent.label_) for ent in doc.ents]
+    return {
+        'pos_counts': pos_counts,
+        'lex_diversity': lex_div,
+        'key_phrases': key_phrases,
+        'entities': entities
     }
 
-    # Filter out matches based on ruleId
-    filtered_matches = [match for match in matches if match.ruleId not in excluded_rules]
+# === Rule-Based Checks ===
+def grammar_issues(text):
+    tool = language_tool_python.LanguageTool('en-US')
+    matches = tool.check(text)
+    excluded = {"PUNCTUATION", "WHITESPACE_RULE"}
+    return [m.message for m in matches if m.ruleId not in excluded]
 
-    issues = [match.message for match in filtered_matches]
-    return issues
 
+def detect_fillers(text):
+    fillers = ["um", "uh", "like", "you know", "actually", "basically", "literally", "I mean", "Hmm", "Ah", "Er", "Ok so"]
+    return [f for f in fillers if f in text.lower()]
+
+# === Sentiment Analysis ===
 def sentiment_score(text):
-    return sentiment_analyzer(text)[0]
+    scores = sentiment_analyzer.polarity_scores(text)
+    compound = scores.get('compound', 0)
+    label = 'POSITIVE' if compound >= 0 else 'NEGATIVE'
+    return {'label': label, 'score': abs(compound)}
 
-def detect_filler_words(text):
-    fillers = ["um", "uh", "like", "you know", "actually", "basically", "literally"]
-    found = [f for f in fillers if f in text.lower()]
-    return found
+# === Feedback Generation ===
+def generate_feedback(metrics):
+    """
+    Rule-based feedback generation using computed metrics.
+    Returns (overall_score, strengths, weaknesses, tips)
+    """
+    # Scoring components
+    grammar_score = max(0, 10 - len(metrics['grammar']))
+    pace_score = max(0, 10 - abs(metrics['wpm'] - 140) / 14)
+    diversity_score = metrics['lex_diversity'] * 10
+    filler_penalty = len(metrics['fillers'])
+    sentiment_score_val = 10 if metrics['sentiment']['label'] == 'POSITIVE' else 5
+    total_score = round((grammar_score + pace_score + diversity_score + sentiment_score_val - filler_penalty) / 4, 1)
 
-def pronunciation_score(file_path, script_path=PROSODY_SCRIPT_PATH):
-    score = mysp.mysppron(file_path, script_path)
-    return score
+    strengths = []
+    weaknesses = []
+    tips = []
 
+    # Strengths
+    if grammar_score > 8:
+        strengths.append("Strong grammar usage")
+    if 120 <= metrics['wpm'] <= 160:
+        strengths.append("Good speaking pace")
+    if metrics['sentiment']['label'] == 'POSITIVE':
+        strengths.append("Positive tone detected")
+    if metrics['lex_diversity'] > 0.5:
+        strengths.append("Good lexical variety")
 
-def prosody_speech_rate(file_path, script_path=PROSODY_SCRIPT_PATH):
-    rate = mysp.myspsr(file_path, script_path)
-    return rate
+    # Weaknesses and tips
+    if len(metrics['grammar']) > 5:
+        weaknesses.append(f"{len(metrics['grammar'])} grammar issues detected")
+        tips.append("Review and correct grammatical errors.")
+    if metrics['wpm'] < 120:
+        weaknesses.append("Speaking too slowly")
+        tips.append("Increase your speech rate slightly.")
+    elif metrics['wpm'] > 160:
+        weaknesses.append("Speaking too quickly")
+        tips.append("Slow down for clarity.")
+    if len(metrics['fillers']) > 2:
+        weaknesses.append(f"Frequent filler words: {metrics['fillers']}")
+        tips.append("Minimise filler words like 'um' and 'like'.")
+    if metrics['lex_diversity'] < 0.3:
+        weaknesses.append("Low lexical diversity")
+        tips.append("Use a wider range of vocabulary.")
+    if metrics['sentiment']['label'] == 'NEGATIVE':
+        weaknesses.append("Negative tone detected")
+        tips.append("Adopt a more positive and confident tone.")
 
+    return total_score, strengths, weaknesses, tips
 
-def pause_analysis(file_path, min_silence_len=500, silence_thresh=-40):
-    audio = AudioSegment.from_wav(file_path)
-    silences = silence.detect_silence(audio,
-                                      min_silence_len=min_silence_len,
-                                      silence_thresh=silence_thresh)
-    num_pauses = len(silences)
-    durations = [(end - start) / 1000.0 for start, end in silences]
-    avg_pause = sum(durations) / num_pauses if num_pauses else 0
-    return num_pauses, avg_pause
-
-def analyze_text(text, file_path):
-    print("\n--- Analysis Report ---")
+# === Core Analysis ===
+def analyze_interview(question, audio_path):
+    print("\n--- Interview Analysis Report ---")
+    recognizer = sr.Recognizer()
+    with sr.AudioFile(audio_path) as source:
+        audio_data = recognizer.record(source)
+    try:
+        text = recognizer.recognize_google(audio_data)
+    except Exception:
+        text = None
+    if not text:
+        print("❌ Could not transcribe audio.")
+        return
     print(f"\nTranscript:\n{text}\n")
 
-    # Basic metrics
-    duration = get_audio_duration(file_path)
-    words = len(re.findall(r'\w+', text))
+    # Metrics calculation
+    duration = get_audio_duration(audio_path)
+    words = len(re.findall(r"\w+", text))
     wpm = words / (duration / 60) if duration > 0 else 0
-    print(f"Speech Duration: {duration:.2f}s")
-    print(f"Word Count: {words}")
-    print(f"Speech Rate (WPM): {wpm:.2f}")
-
-    # Sentiment
-    sent = sentiment_score(text)
-    print(f"\nSentiment: {sent['label']} (Confidence: {sent['score']:.2f})")
-
-    # Grammar
-    grammar_issues = grammar_feedback(text)
-    print(f"\nGrammar Issues Found: {len(grammar_issues)}")
-    for issue in grammar_issues[:3]: print(f"- {issue}")
-
-    # Readability
+    num_pauses, avg_pause = pause_metrics(audio_path)
+    sentiment = sentiment_score(text)
     readability = textstat.flesch_reading_ease(text)
-    print(f"\nReadability (Flesch): {readability:.2f}")
+    grammar = grammar_issues(text)
+    fillers = detect_fillers(text)
+    nlpm = nlp_analysis(text)
 
-    # Fillers
-    fillers = detect_filler_words(text)
-    print(f"\nFiller Words Detected: {fillers}")
+    metrics = {
+        'words': words,
+        'wpm': wpm,
+        'num_pauses': num_pauses,
+        'avg_pause': avg_pause,
+        'sentiment': sentiment,
+        'readability': readability,
+        'grammar': grammar,
+        'fillers': fillers,
+        'lex_diversity': nlpm['lex_diversity'],
+        'pos_counts': nlpm['pos_counts'],
+        'entities': nlpm['entities']
+    }
 
-    # Pronunciation
-    pron_score = pronunciation_score(file_path)
-    if pron_score is not None:
-        print(f"\nPronunciation Score: {pron_score:.2f}/100")
-    else:
-        print("\nPronunciation Score: unavailable")
+    # Print metrics
+    print(f"Duration: {duration:.1f}s | Words: {words} | WPM: {wpm:.1f}")
+    print(f"Pauses: {num_pauses} avg {avg_pause:.2f}s")
+    print(f"Sentiment: {sentiment['label']} ({sentiment['score']:.2f}) | Readability: {readability:.1f}")
+    print(f"Grammar Issues: {len(grammar)} | Fillers: {fillers}")
+    print(f"Lexical Diversity: {metrics['lex_diversity']:.2f} | POS: {metrics['pos_counts']} | Entities: {metrics['entities']}\n")
 
-    # Prosody-based speech rate
-    pros_rate = prosody_speech_rate(file_path)
-    if pros_rate is not None:
-        print(f"Speech Rate (syllables/sec): {pros_rate:.2f}")
-    else:
-        print("Speech Rate (syllables/sec): unavailable")
-
-    # Pause analysis
-    num_pauses, avg_pause = pause_analysis(file_path)
-    print(f"\nNumber of Pauses: {num_pauses}")
-    print(f"Average Pause Duration: {avg_pause:.2f}s")
-
-    # === Scoring ===
-    grammar_score = max(0, 10 - len(grammar_issues))
-    positive_score = 10 if sent['label'] == 'POSITIVE' else 5
-    readability_score = 10 if readability > 60 else 5
-    filler_penalty = len(fillers)
-    professionalism = max(0, 10 - filler_penalty)
-    total = grammar_score + positive_score + readability_score + professionalism
-    print(f"\n💡 Overall Professionalism Score: {total}/40")
-
-    # === Suggestions for Improvement ---
-    print("\n--- Suggestions for Improvement ---")
-    if sent['label'] == "NEGATIVE": print("⚠️ Try to sound more positive or confident.")
-    if grammar_issues: print("✏️ Work on grammar; rephrase and correct tenses.")
-    if readability < 60: print("📖 Make sentences clearer and easier to follow.")
-    if fillers: print("🗣️ Reduce filler words to sound more professional.")
-    if pros_rate is not None and pros_rate < 3: print("⏩ Try to speak a bit faster; aim for ~4–5 syll/sec.")
-    if avg_pause > 1.0: print("⏸️ Minimise long pauses; aim for shorter, purposeful pauses.")
+    # Generate feedback
+    score, strengths, weaknesses, tips = generate_feedback(metrics)
+    print(f"Overall Score: {score}/10")
+    print("Strengths:")
+    for s in strengths:
+        print(f"- {s}")
+    record_audio()
+    print("Weaknesses:")
+    for w in weaknesses:
+        print(f"- {w}")
+    print("Tips for Improvement:")
+    for t in tips:
+        print(f"- {t}")
 
 # === Run ===
 if __name__ == '__main__':
-    record_audio() 
-    file_path = "interviewaudio.wav"  
-    transcribed_text = transcribe_audio(file_path)
-    if transcribed_text and not transcribed_text.startswith("Could not"):
-        analyze_text(transcribed_text, file_path)
-    else:
-        print("Transcription failed or audio was unclear.")
+    #This is a placeholder, but typically, this would be replaced with a custom file with interview questions.
+    questions = [
+        "Tell me about yourself.",
+        "Why do you want this job?"
+    ]
+    wait_time = 5  # seconds to wait between questions
+    # Loop through each question for a full mock interview
+    for idx, question in enumerate(questions, start=1):
+        # Display the question and wait for user readiness
+        print(f"Question {idx}/{len(questions)}: {question}")
+        input("Press Enter to begin recording your answer...")
+        # Record answer
+        record_audio()
+        # Analyze the recorded response
+        analyze_interview(question, "interviewaudio.wav")
+        # Prompt before next question if any remain
+        if idx < len(questions):
+            input("Press Enter when you're ready for the next question...")
+
