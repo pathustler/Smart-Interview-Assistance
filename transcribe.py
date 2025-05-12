@@ -7,12 +7,12 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Core imports
-import speech_recognition as sr  # pip install SpeechRecognition
-import spacy             # pip install spacy && python -m spacy download en_core_web_sm
-import language_tool_python     # pip install language_tool_python
-import textstat          # pip install textstat
+import speech_recognition as sr                                       # pip install SpeechRecognition
+import spacy                                                          # pip install spacy && python -m spacy download en_core_web_sm
+import language_tool_python                                           # pip install language_tool_python
+import textstat                                                       # pip install textstat
 import time
-from pydub import AudioSegment, silence  # pip install pydub
+from pydub import AudioSegment, silence                               # pip install pydub
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # pip install vaderSentiment
 
 from record import record_audio
