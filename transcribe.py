@@ -187,7 +187,6 @@ def analyze_interview(question, audio_path):
     print("Strengths:")
     for s in strengths:
         print(f"- {s}")
-    record_audio()
     print("Weaknesses:")
     for w in weaknesses:
         print(f"- {w}")
