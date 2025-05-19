@@ -1,0 +1,1302 @@
+[
+  {
+    "question": "Tell me about a time you had to learn something completely new quickly.",
+    "category": "Adaptability",
+    "role": "DevOps Engineer",
+    "experience": "fresher",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. Tell me about a time you had to learn something completely new quickly.",
+    "keywords": [
+      "flexible",
+      "change"
+    ]
+  },
+  {
+    "question": "Describe a time you handled a difficult situation professionally.",
+    "category": "Conflict Resolution",
+    "role": "Product Manager",
+    "experience": "2 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. Describe a time you handled a difficult situation professionally.",
+    "keywords": [
+      "problem",
+      "disagree"
+    ]
+  },
+  {
+    "question": "Where do you see yourself in 5 years?",
+    "category": "Career Goals",
+    "role": "Data Scientist",
+    "experience": "2 years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. Where do you see yourself in 5 years?",
+    "keywords": [
+      "aspiration",
+      "dream"
+    ]
+  },
+  {
+    "question": "Tell me about a conflict you had with a coworker and how you resolved it.",
+    "category": "Conflict Resolution",
+    "role": "Marketing Associate",
+    "experience": "4 years",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. Tell me about a conflict you had with a coworker and how you resolved it.",
+    "keywords": [
+      "problem",
+      "disagree"
+    ]
+  },
+  {
+    "question": "What skills do you hope to develop in your next role?",
+    "category": "Career Goals",
+    "role": "Marketing Associate",
+    "experience": "1 year",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What skills do you hope to develop in your next role?",
+    "keywords": [
+      "future",
+      "aspiration"
+    ]
+  },
+  {
+    "question": "What's the most significant change you've had to adapt to at work?",
+    "category": "Adaptability",
+    "role": "DevOps Engineer",
+    "experience": "intern",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. What's the most significant change you've had to adapt to at work?",
+    "keywords": [
+      "learn",
+      "adjust"
+    ]
+  },
+  {
+    "question": "How does this role fit into your career path?",
+    "category": "Career Goals",
+    "role": "Software Engineer",
+    "experience": "2 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. How does this role fit into your career path?",
+    "keywords": [
+      "dream",
+      "plan"
+    ]
+  },
+  {
+    "question": "Tell me about a time you worked well within a team.",
+    "category": "Team Collaboration",
+    "role": "Product Manager",
+    "experience": "6 years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. Tell me about a time you worked well within a team.",
+    "keywords": [
+      "team",
+      "collaboration"
+    ]
+  },
+  {
+    "question": "What are your expectations from leadership in a company?",
+    "category": "Culture Fit",
+    "role": "Marketing Associate",
+    "experience": "4 years",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. What are your expectations from leadership in a company?",
+    "keywords": [
+      "fit",
+      "company"
+    ]
+  },
+  {
+    "question": "What motivates you to come to work every day?",
+    "category": "Motivation",
+    "role": "Data Scientist",
+    "experience": "6 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. What motivates you to come to work every day?",
+    "keywords": [
+      "why",
+      "reason"
+    ]
+  },
+  {
+    "question": "Where do you see yourself in 5 years?",
+    "category": "Career Goals",
+    "role": "QA Analyst",
+    "experience": "1 year",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. Where do you see yourself in 5 years?",
+    "keywords": [
+      "next step",
+      "plan"
+    ]
+  },
+  {
+    "question": "How do you motivate others in a leadership role?",
+    "category": "Leadership",
+    "role": "Marketing Associate",
+    "experience": "6 years",
+    "difficulty": "Hard",
+    "source_type": "Situational",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. How do you motivate others in a leadership role?",
+    "keywords": [
+      "guide",
+      "mentor"
+    ]
+  },
+  {
+    "question": "What tools or methods help you stay organized?",
+    "category": "Work Style",
+    "role": "QA Analyst",
+    "experience": "2 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. What tools or methods help you stay organized?",
+    "keywords": [
+      "daily routine",
+      "method"
+    ]
+  },
+  {
+    "question": "How do you build trust with new teammates?",
+    "category": "Team Collaboration",
+    "role": "Marketing Associate",
+    "experience": "fresher",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you build trust with new teammates?",
+    "keywords": [
+      "cooperate",
+      "team"
+    ]
+  },
+  {
+    "question": "How do you build trust with new teammates?",
+    "category": "Team Collaboration",
+    "role": "DevOps Engineer",
+    "experience": "4 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you build trust with new teammates?",
+    "keywords": [
+      "cooperate",
+      "partner"
+    ]
+  },
+  {
+    "question": "Describe a time you felt out of place in a workplace culture.",
+    "category": "Culture Fit",
+    "role": "Software Engineer",
+    "experience": "5 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. Describe a time you felt out of place in a workplace culture.",
+    "keywords": [
+      "value",
+      "environment"
+    ]
+  },
+  {
+    "question": "Do you prefer working independently or in teams? Why?",
+    "category": "Work Style",
+    "role": "DevOps Engineer",
+    "experience": "3 years",
+    "difficulty": "Hard",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. Do you prefer working independently or in teams? Why?",
+    "keywords": [
+      "workflow",
+      "process"
+    ]
+  },
+  {
+    "question": "What motivates you to come to work every day?",
+    "category": "Motivation",
+    "role": "Data Scientist",
+    "experience": "1 year",
+    "difficulty": "Hard",
+    "source_type": "Situational",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. What motivates you to come to work every day?",
+    "keywords": [
+      "inspiration",
+      "passion"
+    ]
+  },
+  {
+    "question": "Describe a time you led a project or team.",
+    "category": "Leadership",
+    "role": "UX Designer",
+    "experience": "2 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. Describe a time you led a project or team.",
+    "keywords": [
+      "mentor",
+      "manage"
+    ]
+  },
+  {
+    "question": "How do you delegate tasks effectively?",
+    "category": "Leadership",
+    "role": "HR Specialist",
+    "experience": "6 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. How do you delegate tasks effectively?",
+    "keywords": [
+      "supervise",
+      "manage"
+    ]
+  },
+  {
+    "question": "Where do you see yourself in 5 years?",
+    "category": "Career Goals",
+    "role": "Marketing Associate",
+    "experience": "1 year",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. Where do you see yourself in 5 years?",
+    "keywords": [
+      "dream",
+      "aspiration"
+    ]
+  },
+  {
+    "question": "How do you align with our company values?",
+    "category": "Culture Fit",
+    "role": "UX Designer",
+    "experience": "4 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. How do you align with our company values?",
+    "keywords": [
+      "company",
+      "fit"
+    ]
+  },
+  {
+    "question": "Tell me about a time you had to learn something completely new quickly.",
+    "category": "Adaptability",
+    "role": "QA Analyst",
+    "experience": "fresher",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. Tell me about a time you had to learn something completely new quickly.",
+    "keywords": [
+      "adjust",
+      "change"
+    ]
+  },
+  {
+    "question": "How do you delegate tasks effectively?",
+    "category": "Leadership",
+    "role": "Marketing Associate",
+    "experience": "fresher",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. How do you delegate tasks effectively?",
+    "keywords": [
+      "lead",
+      "supervise"
+    ]
+  },
+  {
+    "question": "Where do you see yourself in 5 years?",
+    "category": "Career Goals",
+    "role": "Product Manager",
+    "experience": "7+ years",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. Where do you see yourself in 5 years?",
+    "keywords": [
+      "plan",
+      "aspiration"
+    ]
+  },
+  {
+    "question": "Why do you want to work at our company?",
+    "category": "Motivation",
+    "role": "Marketing Associate",
+    "experience": "4 years",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. Why do you want to work at our company?",
+    "keywords": [
+      "inspiration",
+      "why"
+    ]
+  },
+  {
+    "question": "What's the most significant change you've had to adapt to at work?",
+    "category": "Adaptability",
+    "role": "Software Engineer",
+    "experience": "intern",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. What's the most significant change you've had to adapt to at work?",
+    "keywords": [
+      "flexible",
+      "learn"
+    ]
+  },
+  {
+    "question": "What makes a good leader in your opinion?",
+    "category": "Leadership",
+    "role": "Software Engineer",
+    "experience": "3 years",
+    "difficulty": "Hard",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. What makes a good leader in your opinion?",
+    "keywords": [
+      "mentor",
+      "guide"
+    ]
+  },
+  {
+    "question": "What are your long-term career aspirations?",
+    "category": "Career Goals",
+    "role": "DevOps Engineer",
+    "experience": "6 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What are your long-term career aspirations?",
+    "keywords": [
+      "next step",
+      "aspiration"
+    ]
+  },
+  {
+    "question": "Describe your ideal workday.",
+    "category": "Work Style",
+    "role": "Product Manager",
+    "experience": "5 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. Describe your ideal workday.",
+    "keywords": [
+      "method",
+      "workflow"
+    ]
+  },
+  {
+    "question": "What are your expectations from leadership in a company?",
+    "category": "Culture Fit",
+    "role": "Marketing Associate",
+    "experience": "fresher",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. What are your expectations from leadership in a company?",
+    "keywords": [
+      "belief",
+      "environment"
+    ]
+  },
+  {
+    "question": "How do you deal with feedback that you disagree with?",
+    "category": "Conflict Resolution",
+    "role": "Product Manager",
+    "experience": "4 years",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you deal with feedback that you disagree with?",
+    "keywords": [
+      "resolve",
+      "conflict"
+    ]
+  },
+  {
+    "question": "How do you build trust with new teammates?",
+    "category": "Team Collaboration",
+    "role": "Data Scientist",
+    "experience": "3 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you build trust with new teammates?",
+    "keywords": [
+      "collaboration",
+      "cooperate"
+    ]
+  },
+  {
+    "question": "How do you delegate tasks effectively?",
+    "category": "Leadership",
+    "role": "Software Engineer",
+    "experience": "1 year",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. How do you delegate tasks effectively?",
+    "keywords": [
+      "manage",
+      "guide"
+    ]
+  },
+  {
+    "question": "What role do you usually play in group settings?",
+    "category": "Team Collaboration",
+    "role": "Software Engineer",
+    "experience": "1 year",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. What role do you usually play in group settings?",
+    "keywords": [
+      "team",
+      "cooperate"
+    ]
+  },
+  {
+    "question": "What motivates you to come to work every day?",
+    "category": "Motivation",
+    "role": "DevOps Engineer",
+    "experience": "3 years",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. What motivates you to come to work every day?",
+    "keywords": [
+      "why",
+      "inspiration"
+    ]
+  },
+  {
+    "question": "How do you align with our company values?",
+    "category": "Culture Fit",
+    "role": "HR Specialist",
+    "experience": "1 year",
+    "difficulty": "Hard",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. How do you align with our company values?",
+    "keywords": [
+      "culture",
+      "value"
+    ]
+  },
+  {
+    "question": "What are your long-term career aspirations?",
+    "category": "Career Goals",
+    "role": "DevOps Engineer",
+    "experience": "fresher",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What are your long-term career aspirations?",
+    "keywords": [
+      "future",
+      "aspiration"
+    ]
+  },
+  {
+    "question": "How do you build trust with new teammates?",
+    "category": "Team Collaboration",
+    "role": "UX Designer",
+    "experience": "1 year",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you build trust with new teammates?",
+    "keywords": [
+      "partner",
+      "collaboration"
+    ]
+  },
+  {
+    "question": "What would you do if you disagreed with your manager?",
+    "category": "Conflict Resolution",
+    "role": "Software Engineer",
+    "experience": "2 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. What would you do if you disagreed with your manager?",
+    "keywords": [
+      "challenge",
+      "problem"
+    ]
+  },
+  {
+    "question": "Tell me about a time you were highly motivated to achieve a goal.",
+    "category": "Motivation",
+    "role": "Data Scientist",
+    "experience": "3 years",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. Tell me about a time you were highly motivated to achieve a goal.",
+    "keywords": [
+      "goal",
+      "reason"
+    ]
+  },
+  {
+    "question": "How do you contribute to a positive team environment?",
+    "category": "Culture Fit",
+    "role": "HR Specialist",
+    "experience": "6 years",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. How do you contribute to a positive team environment?",
+    "keywords": [
+      "culture",
+      "environment"
+    ]
+  },
+  {
+    "question": "What drives your passion for this field?",
+    "category": "Motivation",
+    "role": "DevOps Engineer",
+    "experience": "6 years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. What drives your passion for this field?",
+    "keywords": [
+      "reason",
+      "why"
+    ]
+  },
+  {
+    "question": "Do you prefer working independently or in teams? Why?",
+    "category": "Work Style",
+    "role": "UX Designer",
+    "experience": "3 years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. Do you prefer working independently or in teams? Why?",
+    "keywords": [
+      "method",
+      "tool"
+    ]
+  },
+  {
+    "question": "How do you react to sudden changes in priorities?",
+    "category": "Adaptability",
+    "role": "Data Scientist",
+    "experience": "1 year",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. How do you react to sudden changes in priorities?",
+    "keywords": [
+      "adjust",
+      "change"
+    ]
+  },
+  {
+    "question": "Why do you want to work at our company?",
+    "category": "Motivation",
+    "role": "Data Scientist",
+    "experience": "2 years",
+    "difficulty": "Hard",
+    "source_type": "Situational",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. Why do you want to work at our company?",
+    "keywords": [
+      "reason",
+      "passion"
+    ]
+  },
+  {
+    "question": "What tools or methods help you stay organized?",
+    "category": "Work Style",
+    "role": "Product Manager",
+    "experience": "2 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. What tools or methods help you stay organized?",
+    "keywords": [
+      "daily routine",
+      "method"
+    ]
+  },
+  {
+    "question": "How does this role fit into your career path?",
+    "category": "Career Goals",
+    "role": "UX Designer",
+    "experience": "1 year",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. How does this role fit into your career path?",
+    "keywords": [
+      "future",
+      "plan"
+    ]
+  },
+  {
+    "question": "How do you respond when a teammate isn't pulling their weight?",
+    "category": "Conflict Resolution",
+    "role": "HR Specialist",
+    "experience": "intern",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you respond when a teammate isn't pulling their weight?",
+    "keywords": [
+      "challenge",
+      "disagree"
+    ]
+  },
+  {
+    "question": "Do you prefer working independently or in teams? Why?",
+    "category": "Work Style",
+    "role": "Product Manager",
+    "experience": "4 years",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. Do you prefer working independently or in teams? Why?",
+    "keywords": [
+      "process",
+      "method"
+    ]
+  },
+  {
+    "question": "What drives your passion for this field?",
+    "category": "Motivation",
+    "role": "DevOps Engineer",
+    "experience": "fresher",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. What drives your passion for this field?",
+    "keywords": [
+      "why",
+      "reason"
+    ]
+  },
+  {
+    "question": "What would you do if you disagreed with your manager?",
+    "category": "Conflict Resolution",
+    "role": "Product Manager",
+    "experience": "2 years",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. What would you do if you disagreed with your manager?",
+    "keywords": [
+      "problem",
+      "challenge"
+    ]
+  },
+  {
+    "question": "Tell me about a time you mentored someone.",
+    "category": "Leadership",
+    "role": "Software Engineer",
+    "experience": "7+ years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. Tell me about a time you mentored someone.",
+    "keywords": [
+      "manage",
+      "mentor"
+    ]
+  },
+  {
+    "question": "How do you respond when a teammate isn't pulling their weight?",
+    "category": "Conflict Resolution",
+    "role": "HR Specialist",
+    "experience": "fresher",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you respond when a teammate isn't pulling their weight?",
+    "keywords": [
+      "problem",
+      "resolve"
+    ]
+  },
+  {
+    "question": "What's the most significant change you've had to adapt to at work?",
+    "category": "Adaptability",
+    "role": "Software Engineer",
+    "experience": "1 year",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. What's the most significant change you've had to adapt to at work?",
+    "keywords": [
+      "new",
+      "flexible"
+    ]
+  },
+  {
+    "question": "What are your expectations from leadership in a company?",
+    "category": "Culture Fit",
+    "role": "Marketing Associate",
+    "experience": "6 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. What are your expectations from leadership in a company?",
+    "keywords": [
+      "belief",
+      "value"
+    ]
+  },
+  {
+    "question": "How do you ensure productivity when working remotely?",
+    "category": "Work Style",
+    "role": "Marketing Associate",
+    "experience": "3 years",
+    "difficulty": "Hard",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. How do you ensure productivity when working remotely?",
+    "keywords": [
+      "process",
+      "tool"
+    ]
+  },
+  {
+    "question": "What are your long-term career aspirations?",
+    "category": "Career Goals",
+    "role": "DevOps Engineer",
+    "experience": "7+ years",
+    "difficulty": "Easy",
+    "source_type": "Behavioral",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What are your long-term career aspirations?",
+    "keywords": [
+      "future",
+      "aspiration"
+    ]
+  },
+  {
+    "question": "How do you react to sudden changes in priorities?",
+    "category": "Adaptability",
+    "role": "Product Manager",
+    "experience": "4 years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. How do you react to sudden changes in priorities?",
+    "keywords": [
+      "flexible",
+      "adjust"
+    ]
+  },
+  {
+    "question": "How do you stay motivated during repetitive tasks?",
+    "category": "Motivation",
+    "role": "Software Engineer",
+    "experience": "3 years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. How do you stay motivated during repetitive tasks?",
+    "keywords": [
+      "inspiration",
+      "passion"
+    ]
+  },
+  {
+    "question": "How do you stay motivated during repetitive tasks?",
+    "category": "Motivation",
+    "role": "Data Scientist",
+    "experience": "3 years",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. How do you stay motivated during repetitive tasks?",
+    "keywords": [
+      "reason",
+      "drive"
+    ]
+  },
+  {
+    "question": "Do you prefer working independently or in teams? Why?",
+    "category": "Work Style",
+    "role": "Product Manager",
+    "experience": "3 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. Do you prefer working independently or in teams? Why?",
+    "keywords": [
+      "method",
+      "workflow"
+    ]
+  },
+  {
+    "question": "How do you deal with feedback that you disagree with?",
+    "category": "Conflict Resolution",
+    "role": "HR Specialist",
+    "experience": "1 year",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you deal with feedback that you disagree with?",
+    "keywords": [
+      "challenge",
+      "problem"
+    ]
+  },
+  {
+    "question": "How do you align with our company values?",
+    "category": "Culture Fit",
+    "role": "QA Analyst",
+    "experience": "5 years",
+    "difficulty": "Hard",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. How do you align with our company values?",
+    "keywords": [
+      "fit",
+      "value"
+    ]
+  },
+  {
+    "question": "How do you organize and prioritize your daily tasks?",
+    "category": "Work Style",
+    "role": "HR Specialist",
+    "experience": "4 years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. How do you organize and prioritize your daily tasks?",
+    "keywords": [
+      "tool",
+      "process"
+    ]
+  },
+  {
+    "question": "Tell me about a time you were highly motivated to achieve a goal.",
+    "category": "Motivation",
+    "role": "UX Designer",
+    "experience": "2 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. Tell me about a time you were highly motivated to achieve a goal.",
+    "keywords": [
+      "passion",
+      "drive"
+    ]
+  },
+  {
+    "question": "Describe a time you felt out of place in a workplace culture.",
+    "category": "Culture Fit",
+    "role": "Marketing Associate",
+    "experience": "3 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. Describe a time you felt out of place in a workplace culture.",
+    "keywords": [
+      "company",
+      "belief"
+    ]
+  },
+  {
+    "question": "What's the most significant change you've had to adapt to at work?",
+    "category": "Adaptability",
+    "role": "Data Scientist",
+    "experience": "4 years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. What's the most significant change you've had to adapt to at work?",
+    "keywords": [
+      "new",
+      "change"
+    ]
+  },
+  {
+    "question": "How do you deal with feedback that you disagree with?",
+    "category": "Conflict Resolution",
+    "role": "QA Analyst",
+    "experience": "fresher",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you deal with feedback that you disagree with?",
+    "keywords": [
+      "conflict",
+      "resolve"
+    ]
+  },
+  {
+    "question": "How do you build trust with new teammates?",
+    "category": "Team Collaboration",
+    "role": "HR Specialist",
+    "experience": "7+ years",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you build trust with new teammates?",
+    "keywords": [
+      "group",
+      "partner"
+    ]
+  },
+  {
+    "question": "What would you do if you disagreed with your manager?",
+    "category": "Conflict Resolution",
+    "role": "UX Designer",
+    "experience": "6 years",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. What would you do if you disagreed with your manager?",
+    "keywords": [
+      "challenge",
+      "conflict"
+    ]
+  },
+  {
+    "question": "What type of company culture do you thrive in?",
+    "category": "Culture Fit",
+    "role": "Software Engineer",
+    "experience": "2 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. What type of company culture do you thrive in?",
+    "keywords": [
+      "company",
+      "culture"
+    ]
+  },
+  {
+    "question": "How do you stay motivated during repetitive tasks?",
+    "category": "Motivation",
+    "role": "UX Designer",
+    "experience": "4 years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. How do you stay motivated during repetitive tasks?",
+    "keywords": [
+      "goal",
+      "why"
+    ]
+  },
+  {
+    "question": "How do you stay motivated during repetitive tasks?",
+    "category": "Motivation",
+    "role": "Marketing Associate",
+    "experience": "6 years",
+    "difficulty": "Easy",
+    "source_type": "Behavioral",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. How do you stay motivated during repetitive tasks?",
+    "keywords": [
+      "passion",
+      "inspiration"
+    ]
+  },
+  {
+    "question": "How do you organize and prioritize your daily tasks?",
+    "category": "Work Style",
+    "role": "UX Designer",
+    "experience": "7+ years",
+    "difficulty": "Hard",
+    "source_type": "Behavioral",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. How do you organize and prioritize your daily tasks?",
+    "keywords": [
+      "process",
+      "workflow"
+    ]
+  },
+  {
+    "question": "Do you prefer working independently or in teams? Why?",
+    "category": "Work Style",
+    "role": "HR Specialist",
+    "experience": "7+ years",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "I follow a structured workflow and use tools like Jira/Trello/Notion to manage my tasks efficiently. Do you prefer working independently or in teams? Why?",
+    "keywords": [
+      "method",
+      "workflow"
+    ]
+  },
+  {
+    "question": "Describe a time you felt out of place in a workplace culture.",
+    "category": "Culture Fit",
+    "role": "Data Scientist",
+    "experience": "2 years",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. Describe a time you felt out of place in a workplace culture.",
+    "keywords": [
+      "culture",
+      "belief"
+    ]
+  },
+  {
+    "question": "How do you react to sudden changes in priorities?",
+    "category": "Adaptability",
+    "role": "QA Analyst",
+    "experience": "fresher",
+    "difficulty": "Hard",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. How do you react to sudden changes in priorities?",
+    "keywords": [
+      "adjust",
+      "new"
+    ]
+  },
+  {
+    "question": "What are your long-term career aspirations?",
+    "category": "Career Goals",
+    "role": "Product Manager",
+    "experience": "fresher",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What are your long-term career aspirations?",
+    "keywords": [
+      "dream",
+      "plan"
+    ]
+  },
+  {
+    "question": "What motivates you to come to work every day?",
+    "category": "Motivation",
+    "role": "QA Analyst",
+    "experience": "intern",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. What motivates you to come to work every day?",
+    "keywords": [
+      "goal",
+      "passion"
+    ]
+  },
+  {
+    "question": "How do you stay motivated during repetitive tasks?",
+    "category": "Motivation",
+    "role": "Marketing Associate",
+    "experience": "fresher",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. How do you stay motivated during repetitive tasks?",
+    "keywords": [
+      "inspiration",
+      "why"
+    ]
+  },
+  {
+    "question": "Describe a time you led a project or team.",
+    "category": "Leadership",
+    "role": "DevOps Engineer",
+    "experience": "intern",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. Describe a time you led a project or team.",
+    "keywords": [
+      "lead",
+      "supervise"
+    ]
+  },
+  {
+    "question": "What role do you usually play in group settings?",
+    "category": "Team Collaboration",
+    "role": "UX Designer",
+    "experience": "fresher",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. What role do you usually play in group settings?",
+    "keywords": [
+      "cooperate",
+      "partner"
+    ]
+  },
+  {
+    "question": "What skills do you hope to develop in your next role?",
+    "category": "Career Goals",
+    "role": "Product Manager",
+    "experience": "7+ years",
+    "difficulty": "Medium",
+    "source_type": "Behavioral",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What skills do you hope to develop in your next role?",
+    "keywords": [
+      "aspiration",
+      "dream"
+    ]
+  },
+  {
+    "question": "How do you handle disagreements within a team?",
+    "category": "Team Collaboration",
+    "role": "Data Scientist",
+    "experience": "3 years",
+    "difficulty": "Easy",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you handle disagreements within a team?",
+    "keywords": [
+      "partner",
+      "group"
+    ]
+  },
+  {
+    "question": "What's the most significant change you've had to adapt to at work?",
+    "category": "Adaptability",
+    "role": "HR Specialist",
+    "experience": "4 years",
+    "difficulty": "Easy",
+    "source_type": "Behavioral",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. What's the most significant change you've had to adapt to at work?",
+    "keywords": [
+      "adjust",
+      "new"
+    ]
+  },
+  {
+    "question": "How do you build trust with new teammates?",
+    "category": "Team Collaboration",
+    "role": "HR Specialist",
+    "experience": "5 years",
+    "difficulty": "Hard",
+    "source_type": "Situational",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. How do you build trust with new teammates?",
+    "keywords": [
+      "partner",
+      "group"
+    ]
+  },
+  {
+    "question": "What skills do you hope to develop in your next role?",
+    "category": "Career Goals",
+    "role": "DevOps Engineer",
+    "experience": "5 years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What skills do you hope to develop in your next role?",
+    "keywords": [
+      "dream",
+      "plan"
+    ]
+  },
+  {
+    "question": "What role do you usually play in group settings?",
+    "category": "Team Collaboration",
+    "role": "HR Specialist",
+    "experience": "1 year",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. What role do you usually play in group settings?",
+    "keywords": [
+      "group",
+      "collaboration"
+    ]
+  },
+  {
+    "question": "How do you respond when a teammate isn't pulling their weight?",
+    "category": "Conflict Resolution",
+    "role": "UX Designer",
+    "experience": "5 years",
+    "difficulty": "Easy",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you respond when a teammate isn't pulling their weight?",
+    "keywords": [
+      "problem",
+      "disagree"
+    ]
+  },
+  {
+    "question": "Tell me about a time you were highly motivated to achieve a goal.",
+    "category": "Motivation",
+    "role": "DevOps Engineer",
+    "experience": "intern",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I'm motivated by challenges and the opportunity to grow both personally and professionally. Tell me about a time you were highly motivated to achieve a goal.",
+    "keywords": [
+      "why",
+      "passion"
+    ]
+  },
+  {
+    "question": "What are your long-term career aspirations?",
+    "category": "Career Goals",
+    "role": "HR Specialist",
+    "experience": "7+ years",
+    "difficulty": "Easy",
+    "source_type": "Situational",
+    "ideal_answer": "My long-term goal is to grow into a senior role where I can contribute more strategically and mentor others. This role brings me closer to that. What are your long-term career aspirations?",
+    "keywords": [
+      "next step",
+      "future"
+    ]
+  },
+  {
+    "question": "How do you react to sudden changes in priorities?",
+    "category": "Adaptability",
+    "role": "Product Manager",
+    "experience": "5 years",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. How do you react to sudden changes in priorities?",
+    "keywords": [
+      "flexible",
+      "change"
+    ]
+  },
+  {
+    "question": "Describe a project where teamwork was essential to success.",
+    "category": "Team Collaboration",
+    "role": "Product Manager",
+    "experience": "7+ years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. Describe a project where teamwork was essential to success.",
+    "keywords": [
+      "partner",
+      "team"
+    ]
+  },
+  {
+    "question": "How do you respond when a teammate isn't pulling their weight?",
+    "category": "Conflict Resolution",
+    "role": "Data Scientist",
+    "experience": "fresher",
+    "difficulty": "Hard",
+    "source_type": "STAR-Based",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. How do you respond when a teammate isn't pulling their weight?",
+    "keywords": [
+      "problem",
+      "conflict"
+    ]
+  },
+  {
+    "question": "How do you delegate tasks effectively?",
+    "category": "Leadership",
+    "role": "HR Specialist",
+    "experience": "4 years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "I lead by example and encourage open communication and accountability. One time, I led a team through X and we achieved Y. How do you delegate tasks effectively?",
+    "keywords": [
+      "lead",
+      "manage"
+    ]
+  },
+  {
+    "question": "How do you contribute to a positive team environment?",
+    "category": "Culture Fit",
+    "role": "Marketing Associate",
+    "experience": "intern",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I thrive in collaborative, transparent environments where innovation and respect are valued. How do you contribute to a positive team environment?",
+    "keywords": [
+      "culture",
+      "value"
+    ]
+  },
+  {
+    "question": "Describe a time you handled a difficult situation professionally.",
+    "category": "Conflict Resolution",
+    "role": "Product Manager",
+    "experience": "5 years",
+    "difficulty": "Medium",
+    "source_type": "Open-Ended",
+    "ideal_answer": "When faced with conflict, I approach it calmly and try to understand all perspectives before finding a solution together. Describe a time you handled a difficult situation professionally.",
+    "keywords": [
+      "challenge",
+      "disagree"
+    ]
+  },
+  {
+    "question": "Describe a time you failed and what you learned from it.",
+    "category": "Adaptability",
+    "role": "QA Analyst",
+    "experience": "intern",
+    "difficulty": "Medium",
+    "source_type": "Situational",
+    "ideal_answer": "I'm always eager to learn and embrace change as a way to improve. For example, I once had to switch to a new tech stack and picked it up quickly. Describe a time you failed and what you learned from it.",
+    "keywords": [
+      "change",
+      "flexible"
+    ]
+  },
+  {
+    "question": "Describe a project where teamwork was essential to success.",
+    "category": "Team Collaboration",
+    "role": "Data Scientist",
+    "experience": "4 years",
+    "difficulty": "Medium",
+    "source_type": "STAR-Based",
+    "ideal_answer": "I believe communication and mutual respect are key to successful collaboration. In one project, we achieved X because of great teamwork. Describe a project where teamwork was essential to success.",
+    "keywords": [
+      "team",
+      "group"
+    ]
+  }
+]
